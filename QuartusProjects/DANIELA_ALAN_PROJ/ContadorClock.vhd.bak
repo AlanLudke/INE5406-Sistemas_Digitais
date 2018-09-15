@@ -1,0 +1,76 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity ContadorClock is
+port (clock: in std_logic;
+		Reset: in std_logic;
+		CLK1, CLK2, CLK3, CLK4: out std_logic
+);
+end ContadorClock;
+architecture FSM_beh of ContadorClock is
+	signal contador: std_logic_vector(27 downto 0):= x"0000000";
+	signal contador2: std_logic_vector(27 downto 0) := x"0000000";
+	signal contador3: std_logic_vector(27 downto 0) := x"0000000";
+	signal contador4: std_logic_vector(27 downto 0) := x"0000000";
+begin
+process (clock, Reset)
+	begin
+		if (Reset = '1') then
+			contador <= x"0000000";
+		elsif (clock'event AND clock = '1') then
+			contador <= contador + x"0000001";
+			if  (contador = x"1DCD6500") then
+				contador <= x"00000000";
+				CLK1<= '1';
+			else 
+				CLK1<= '0';
+			end if;
+		end if;
+	end process;
+
+process (clock, Reset)
+	begin
+		if (Reset = '1') then
+			contador2 <= x"0000000";
+		elsif (clock'event AND clock = '1') then
+			contador2 <= contador2 + x"0000001";
+			if  (contador2 = x"BEBC200") then
+				contador2 <= x"0000000";
+				CLK2<= '1';
+			else 
+				CLK2 <= '0';
+			end if;
+		end if;
+	end process;
+
+process (clock, Reset)
+	begin
+		if (Reset = '1') then
+			contador3 <= x"0000000";
+		elsif (clock'event AND clock = '1') then
+			contador3 <= contador3 + x"0000001";
+			if  (contador3 = x"8F0D180") then
+				contador3 <= x"0000000";
+				CLK3<= '1';
+			else 
+				CLK3 <= '0';
+			end if;
+		end if;
+	end process;
+
+process (clock, Reset)
+	begin
+		if (Reset = '1') then
+			contador4 <= x"0000000";
+		elsif (clock'event AND clock = '1') then
+			contador4 <= contador4 + x"0000001";
+			if  (contador4 = x"5F5E100") then
+				contador4 <= x"0000000";
+				CLK4<= '1';
+			else 
+				CLK4 <= '0';
+			end if;
+		end if;
+	end process;
+end FSM_beh;

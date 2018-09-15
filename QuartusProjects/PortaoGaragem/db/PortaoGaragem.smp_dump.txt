@@ -1,0 +1,7 @@
+
+State Machine - |PortaoGaragem|state
+Name state.FECHANDO state.ABERTO state.ABRINDO state.FECHADO 
+state.FECHADO 0 0 0 0 
+state.ABRINDO 0 0 1 1 
+state.ABERTO 0 1 0 1 
+state.FECHANDO 1 0 0 1 

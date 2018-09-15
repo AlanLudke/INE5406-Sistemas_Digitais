@@ -1,0 +1,17 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/sequencer_top.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/seq0_fsm.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/seq1_fsm.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/seq2_fsm.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/super_top.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/decod7.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/clock_div_top.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/clock_div_FSM.vhd}
+vcom -93 -work work {C:/Users/Frata/Desktop/supertop_COM TOPO HIERARQUICO/ROM.vhd}
+

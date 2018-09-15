@@ -1,0 +1,86 @@
+library IEEE; 
+use IEEE.Std_Logic_1164.all; 
+use IEEE.std_logic_unsigned.all; 
+
+entity seq1_fsm is port ( 	
+	seq: out std_logic_vector(3 downto 0);
+	clock, reset, enable : in std_logic
+	); 
+end; 
+
+architecture bhv of seq1_fsm is
+ 
+type STATES is (S0,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S11,S12,S13,S14,S15); 
+signal EA, PE : STATES;
+
+
+begin 
+
+	process (clock, reset, enable) 
+		begin 
+			if reset = '0' then				
+				EA <= S0; 
+			elsif clock'event and clock='1' and enable = '1' then
+				EA <= PE;
+			elsif clock'event and clock='1' and enable = '0' then
+				EA <= EA; 	
+			end if; 
+	end process; 
+	
+	process(EA) 
+		begin			
+			--if clock'event and clock='0' then				
+				case EA is 
+					when S0 =>
+						seq <= "0000"; -- 0
+						PE <= S1;
+					when S1 =>
+						seq <= "0001"; -- 1
+						PE <= S2;
+					when S2 =>
+						seq <= "0010"; -- 2
+						PE <= S3;
+					when S3 =>
+						seq <= "0011"; -- 3
+						PE <= S4;
+					when S4 =>
+						seq <= "0100"; -- 4
+						PE <= S5;
+					when S5 =>
+						seq <= "0101"; -- 5
+						PE <= S6;
+					when S6 =>
+						seq <= "0110"; -- 6
+						PE <= S7;
+					when S7 =>
+						seq <= "0111"; -- 7
+						PE <= S8;
+					when S8 =>
+						seq <= "1000"; -- 8
+						PE <= S9;
+					when S9 =>
+						seq <= "1001"; -- 9
+						PE <= S10;
+					when S10 =>
+						seq <= "1010"; -- a
+						PE <= S11;
+					when S11 =>
+						seq <= "1011"; -- b
+						PE <= S12;
+					when S12 =>
+						seq <= "1100"; -- c
+						PE <= S13;
+					when S13 =>
+						seq <= "1101"; -- d
+						PE <= S14;
+					when S14 =>
+						seq <= "1110"; -- e
+						PE <= S15;
+					when S15 =>
+						seq <= "1111"; -- f
+						PE <= S0; 
+				end case;								
+			--end if; 
+	end process; 	
+	
+end bhv;

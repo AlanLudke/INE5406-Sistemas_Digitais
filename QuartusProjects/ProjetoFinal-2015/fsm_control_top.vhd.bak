@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity fsm_control_top is
+ port ( 
+	 HEX3, HEX4, HEX5: out std_logic_vector (6 downto 0);
+    KEY: in std_logic_vector(2 downto 0);   
+    LEDR: out std_logic_vector(4 downto 0);   
+    clock_50: in std_logic  
+    );
+end fsm_control_top;
+
+architecture topo_stru of fsm_control_top is 
+
+signal to_decod_state, to_decod_round : std_logic_vector(3 downto 0);
+    
+component  FSMctrl 
+port ( 
+	print_round, print_cstate: out std_logic_vector(3 downto 0);
+	clock, reset, init_stop , credit_below_zero : in std_logic;
+	enable_c0, enable_c1, enable_c2, habilit_credit, reset_reg: out std_logic
+	);
+end component; 
+ 
+component decod7
+	port (
+		C: in std_logic_vector(3 downto 0);
+		F: out std_logic_vector(6 downto 0)
+		);
+end component; 
+
+
+begin
+L0: FSMctrl port map (to_decod_round, to_decod_state, clock_50, KEY(0), KEY(2),KEY(1),LEDR(0),LEDR(1),LEDR(2),LEDR(3),LEDR(4));
+L1: decod7 port map (to_decod_round, HEX3);
+L2: decod7 port map (to_decod_state, HEX4);
+
+end topo_stru;

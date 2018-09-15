@@ -1,0 +1,27 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/Decod7seg.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/CONTROLE.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/multiplexadorROM.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/registradorMuxROMs.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/ROM1.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/mux4x1Clock.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/Datapath.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/ROM3.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/ROM2.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/ContadorClock.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/registradorComparador.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/Decod7segLevel.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/ButtonSync.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/DecodLED.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/ROM4.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/Comparador.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/Jogo.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/Contador.vhd}
+vcom -93 -work work {/home/alunos/Desktop/1208A/Untitled Folder/AlanV2/multiplexadorResultado.vhd}
+

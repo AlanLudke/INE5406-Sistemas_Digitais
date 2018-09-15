@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/alunos/Desktop/1208A/EXE4/simulation/modelsim
+Ebuttonsync
+Z1 w1510233947
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/alunos/Desktop/1208A/EXE4/ButtonSync.vhd
+Z5 F/home/alunos/Desktop/1208A/EXE4/ButtonSync.vhd
+l0
+L4
+VmEhOQ3b[Z@6KQ1Lh2K2463
+!s100 QDVkkfF1k^lZ6;Ak8JXi00
+Z6 OV;C;10.3d;59
+31
+Z7 !s110 1510235691
+!i10b 1
+Z8 !s108 1510235691.890526
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/1208A/EXE4/ButtonSync.vhd|
+Z10 !s107 /home/alunos/Desktop/1208A/EXE4/ButtonSync.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Abuttonsyncimpl
+R2
+R3
+DEx4 work 10 buttonsync 0 22 mEhOQ3b[Z@6KQ1Lh2K2463
+l26
+L22
+V=T^93LmC<8KSgVVlJiI000
+!s100 aWX0@>4PK[^>LY5^W?FZS1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emultimodo
+Z13 w1510235417
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R0
+Z16 8/home/alunos/Desktop/1208A/EXE4/multimodo.vhd
+Z17 F/home/alunos/Desktop/1208A/EXE4/multimodo.vhd
+l0
+L6
+Vb<6<mnHK;n87NoSlggJ0B2
+!s100 jRR=K3KZ][H9[XLje<N122
+R6
+31
+R7
+!i10b 1
+Z18 !s108 1510235691.702661
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/1208A/EXE4/multimodo.vhd|
+Z20 !s107 /home/alunos/Desktop/1208A/EXE4/multimodo.vhd|
+!i113 1
+R11
+R12
+Acircuito
+R14
+R15
+R2
+R3
+DEx4 work 9 multimodo 0 22 b<6<mnHK;n87NoSlggJ0B2
+l54
+L13
+V[jQG?gCi`F]j52d2@QfN]1
+!s100 2:^WJCoBCFJK_S[6Y2dZl1
+R6
+31
+R7
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Emultiplexador
+Z21 w1510234351
+R14
+R15
+R2
+R3
+R0
+Z22 8/home/alunos/Desktop/1208A/EXE4/multiplexador.vhd
+Z23 F/home/alunos/Desktop/1208A/EXE4/multiplexador.vhd
+l0
+L6
+VR_`V2K439cC]YEf1c3EMO3
+!s100 lYRk``_??DmH[X>1Pf1Cz2
+R6
+31
+R7
+!i10b 1
+Z24 !s108 1510235691.769907
+Z25 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/1208A/EXE4/multiplexador.vhd|
+Z26 !s107 /home/alunos/Desktop/1208A/EXE4/multiplexador.vhd|
+!i113 1
+R11
+R12
+Acircuito
+R14
+R15
+R2
+R3
+DEx4 work 13 multiplexador 0 22 R_`V2K439cC]YEf1c3EMO3
+l15
+L14
+VHJe]9NfTHM]ohh3JSaZV^3
+!s100 6M>YXO60MU_gA7zHj7K=o2
+R6
+31
+R7
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Eregistrador
+Z27 w1510234417
+R14
+R15
+R2
+R3
+R0
+Z28 8/home/alunos/Desktop/1208A/EXE4/registrador.vhd
+Z29 F/home/alunos/Desktop/1208A/EXE4/registrador.vhd
+l0
+L6
+VLT@:?bc4DYhz@MK8U<K4@1
+!s100 QQOGOE6NbTRgR=aBC^U343
+R6
+31
+R7
+!i10b 1
+Z30 !s108 1510235691.831318
+Z31 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/1208A/EXE4/registrador.vhd|
+Z32 !s107 /home/alunos/Desktop/1208A/EXE4/registrador.vhd|
+!i113 1
+R11
+R12
+Acircuito
+R14
+R15
+R2
+R3
+DEx4 work 11 registrador 0 22 LT@:?bc4DYhz@MK8U<K4@1
+l18
+L16
+Vkn=>b6Wz0N]7]iOFgXUC_0
+!s100 b0kfN`AZ8;h6el@coE<W:3
+R6
+31
+R7
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R11
+R12

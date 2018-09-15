@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity sequencer_top is
+ port ( 
+	HEX0, HEX1, HEX2: out std_logic_vector (6 downto 0);
+	SW: in std_logic_vector(2 downto 0);
+	KEY: in std_logic_vector(0 downto 0);
+	clock_50: in std_logic  
+	);
+end sequencer_top;
+
+architecture topo_stru of sequencer_top is 
+
+signal sequence0, sequence1, sequence2 : std_logic_vector(3 downto 0);
+
+component seq0_fsm
+ port (
+		seq: out std_logic_vector(3 downto 0);
+		clock, reset, enable : in std_logic
+		); 
+ end component;
+
+component seq1_fsm
+ port (
+		seq: out std_logic_vector(3 downto 0);
+		clock, reset, enable : in std_logic
+		); 
+ end component; 
+
+component seq2_fsm
+ port (
+		seq: out std_logic_vector(3 downto 0);
+		clock, reset, enable : in std_logic
+		); 
+ end component;  
+ 
+ component decod7
+ port (
+		C: in std_logic_vector(3 downto 0);
+		F: out std_logic_vector(6 downto 0)
+		);
+end component;
+
+begin
+L0: seq0_fsm port map (sequence0, clock_50, KEY(0), SW(0));
+L1: seq1_fsm port map (sequence1, clock_50, KEY(0), SW(1));
+L2: seq2_fsm port map (sequence2, clock_50, KEY(0), SW(2));
+L3: decod7 port map (sequence0, HEX0);
+L4: decod7 port map (sequence1, HEX1);
+L5: decod7 port map (sequence2, HEX2);
+
+end topo_stru; 

@@ -1,0 +1,84 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+--ena_resto=ENABLE_xxx
+--ena_reg_2=ENABLE_registradorMuxROMs
+--ena_pts=ENABLE_registradorComparador
+
+entity CONTROLE is
+port( RESET, ena_resto, ena_reg_2, ena_pts: out std_logic;
+		KEY1, KEY0, tc, CLOCK_50: in std_logic
+);
+end CONTROLE;
+
+architecture circuito of CONTROLE is
+type STATES is(Init, Setup, Game, Result);
+signal estadoAtual, proximoEstado: STATES;
+signal aux_reset, aux_ena_resto, aux_ena_reg_2, aux_ena_pts: std_logic;
+
+begin
+	process(CLOCK_50, KEY1, KEY0)
+		begin
+			if(KEY0='0') then
+				estadoAtual<=Init;
+			elsif(CLOCK_50'event and CLOCK_50 = '1') then
+				estadoAtual<=proximoEstado;
+			end if;
+	end process;
+
+	process(estadoAtual, KEY1, tc, aux_ena_resto, aux_ena_reg_2, aux_ena_pts, aux_reset)
+		begin
+			case(estadoAtual) is
+				when Init =>
+						if(KEY1='1') then
+							proximoEstado<=Init;
+						elsif(KEY1='0') then
+							proximoEstado<=Setup;
+						end if;
+							aux_RESET<='1';
+							aux_ena_resto<='0';
+							aux_ena_reg_2<='0';
+							aux_ena_pts<='0';
+				
+				when Setup=>
+						if(KEY1='1') then
+							proximoEstado<=Setup;
+						elsif(KEY1='0') then
+							proximoEstado<=Game;
+						end if;
+							aux_RESET<='0';
+							aux_ena_resto<='0';
+							aux_ena_reg_2<='1';
+							aux_ena_pts<='0';
+						
+				when Game=>
+						if(tc='0') then
+							proximoEstado<=Game;
+						elsif(tc='1') then
+							proximoEstado<=Result;
+						end if;
+							aux_RESET<='0';
+							aux_ena_resto<='1';
+							aux_ena_reg_2<='0';
+							aux_ena_pts<='0';
+					
+				when Result=>
+						if(KEY1='1') then
+							proximoEstado<=Result;
+						elsif(KEY1='0') then
+							proximoEstado<=Init;
+						end if;
+							aux_RESET<='1';
+							aux_ena_resto<='0';
+							aux_ena_reg_2<='0';
+							aux_ena_pts<='1';
+							
+					
+				end case;
+				ena_resto<=aux_ena_resto;
+				ena_reg_2<=aux_ena_reg_2;
+				ena_pts<=aux_ena_pts;
+				RESET<=aux_reset;
+			end process;
+		end circuito;

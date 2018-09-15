@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/sequencer_top.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/seq0_fsm.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/seq1_fsm.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/seq2_fsm.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/super_top.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/decod7.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/clock_div_top.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/clock_div_FSM.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/ROM.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/adder_register_top.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/signed_adder.vhd}
+vcom -93 -work work {C:/Users/Alunos/Desktop/supertop_atecomparador_100porcento/D_11FF.vhd}
+

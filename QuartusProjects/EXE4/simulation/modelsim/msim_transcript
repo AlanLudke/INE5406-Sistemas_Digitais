@@ -1,0 +1,118 @@
+# do exe4_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim LE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying /opt/altera/15.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/15.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/alunos/Desktop/1208A/EXE4/multimodo.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:54:51 on Nov 09,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/1208A/EXE4/multimodo.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity multimodo
+# -- Compiling architecture circuito of multimodo
+# End time: 11:54:51 on Nov 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/1208A/EXE4/multiplexador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:54:51 on Nov 09,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/1208A/EXE4/multiplexador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity multiplexador
+# -- Compiling architecture circuito of multiplexador
+# End time: 11:54:51 on Nov 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/1208A/EXE4/registrador.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:54:51 on Nov 09,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/1208A/EXE4/registrador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity registrador
+# -- Compiling architecture circuito of registrador
+# End time: 11:54:51 on Nov 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/1208A/EXE4/ButtonSync.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:54:51 on Nov 09,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/1208A/EXE4/ButtonSync.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ButtonSync
+# -- Compiling architecture ButtonSyncImpl of ButtonSync
+# End time: 11:54:51 on Nov 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vmap -del work
+# Model Technology ModelSim LE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet -del work 
+# Removing reference to logical library work
+# Modifying modelsim.ini
+vlib work
+vcom -reportprogress 300 -work work /home/alunos/Desktop/1208A/EXE4/simulation/modelsim/exe4.vho
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:55:02 on Nov 09,2017
+# vcom -reportprogress 300 -work work /home/alunos/Desktop/1208A/EXE4/simulation/modelsim/exe4.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package altera_lnsim_components
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity multimodo
+# -- Compiling architecture structure of multimodo
+# End time: 11:55:02 on Nov 09,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.multimodo
+# vsim -i -l msim_transcript -do "exe4_run_msim_rtl_vhdl.do" 
+# Start time: 11:55:06 on Nov 09,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.multimodo(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading cyclonev.cyclonev_clkena(behavior)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 10351 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position insertpoint  \
+sim:/multimodo/ww_SW \
+sim:/multimodo/ww_LEDR \
+sim:/multimodo/ww_KEY
+force -freeze sim:/multimodo/ww_SW 0100000100 0
+run -step
+# End time: 11:56:05 on Nov 09,2017, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 1

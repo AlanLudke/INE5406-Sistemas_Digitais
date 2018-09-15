@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity oi is 
+
+generic
+	(
+		n : positive := 3
+	);
+
+port (
+	clk, reset: in std_logic;
+	entrada: in std_logic_vector(0 to (n-1));
+	saida: out std_logic_vector (0 to (n-1))
+);
+end entity;
+
+architecture behavior of oi is 
+signal soma: std_logic_vector (0 to (n-1));
+begin
+process (clk, reset)
+	if reset = '1' then soma <= (others<='0');
+	elsif rising_edge(clk) then soma <= (unsigned(entrada) + '1');
+	end if;
+	end process;
+saida <= soma;
+end architecture;
+	

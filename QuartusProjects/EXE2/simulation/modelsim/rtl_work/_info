@@ -1,0 +1,338 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/allu/QuartusProjects/EXE2/simulation/modelsim
+Ecompl2
+Z1 w1505392807
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8/home/allu/QuartusProjects/EXE2/Compl2.vhd
+Z7 F/home/allu/QuartusProjects/EXE2/Compl2.vhd
+l0
+L6
+V;JFBWo<L6KbE;]^SnDOAm3
+!s100 i_ClC=mnWP[g@HX0FJHKi1
+Z8 OV;C;10.4b;61
+31
+Z9 !s110 1507514373
+!i10b 1
+Z10 !s108 1507514373.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/Compl2.vhd|
+Z12 !s107 /home/allu/QuartusProjects/EXE2/Compl2.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1
+Ac22
+R2
+R3
+R4
+R5
+DEx4 work 6 compl2 0 22 ;JFBWo<L6KbE;]^SnDOAm3
+l12
+L11
+VM2MCWNTnPb>`Xf0AN6iCf1
+!s100 Gi@]g1`nl?dW6_XHH7bCo2
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Edecod
+Z15 w1506000519
+R4
+R5
+R0
+Z16 8/home/allu/QuartusProjects/EXE2/Decod.vhd
+Z17 F/home/allu/QuartusProjects/EXE2/Decod.vhd
+l0
+L4
+V[2Q4[XL:7T`AHHD>BK^SY0
+!s100 d>UfgoYA?51]]>z8jdZI40
+R8
+31
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/Decod.vhd|
+Z19 !s107 /home/allu/QuartusProjects/EXE2/Decod.vhd|
+!i113 1
+R13
+R14
+Adecodx
+R4
+R5
+DEx4 work 5 decod 0 22 [2Q4[XL:7T`AHHD>BK^SY0
+l9
+L8
+VA?_W6z?gh3NQdh^2NzUgE0
+!s100 lIVOd[^D7NUBX<7GK4nMj0
+R8
+31
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Eexe2
+Z20 w1506604984
+R2
+R3
+R4
+R5
+R0
+Z21 8/home/allu/QuartusProjects/EXE2/Exe2.vhd
+Z22 F/home/allu/QuartusProjects/EXE2/Exe2.vhd
+l0
+L6
+V>ma6GD4P`jLN7kOUzV;L?0
+!s100 7b35A[o3cOC2NJfd[nAIS0
+R8
+31
+R9
+!i10b 1
+R10
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/Exe2.vhd|
+Z24 !s107 /home/allu/QuartusProjects/EXE2/Exe2.vhd|
+!i113 1
+R13
+R14
+Aexefoda
+R2
+R3
+R4
+R5
+DEx4 work 4 exe2 0 22 >ma6GD4P`jLN7kOUzV;L?0
+l31
+L13
+VaGjXN_iI?T<YOaeHkQE_b3
+!s100 AXkoNZeV;914WL5zIDEMc0
+R8
+31
+R9
+!i10b 1
+R10
+R23
+R24
+!i113 1
+R13
+R14
+Efulladder
+Z25 w1504182902
+R4
+R5
+R0
+Z26 8/home/allu/QuartusProjects/EXE2/fulladder.vhd
+Z27 F/home/allu/QuartusProjects/EXE2/fulladder.vhd
+l0
+L3
+V@6ImWJ_;REgZ8]4fTeDJo2
+!s100 c3_cE5l?b<6WH3PbE:IkY2
+R8
+31
+R9
+!i10b 1
+R10
+Z28 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/fulladder.vhd|
+Z29 !s107 /home/allu/QuartusProjects/EXE2/fulladder.vhd|
+!i113 1
+R13
+R14
+Alab4fa
+R4
+R5
+DEx4 work 9 fulladder 0 22 @6ImWJ_;REgZ8]4fTeDJo2
+l13
+L11
+VIa9_`3c3^Udz[m9S^>IMY0
+!s100 8=:0>V05[3251g3[cI9oM2
+R8
+31
+R9
+!i10b 1
+R10
+R28
+R29
+!i113 1
+R13
+R14
+Elab5
+Z30 w1506520547
+R2
+R3
+R4
+R5
+R0
+Z31 8/home/allu/QuartusProjects/EXE2/Lab5.vhd
+Z32 F/home/allu/QuartusProjects/EXE2/Lab5.vhd
+l0
+L6
+VMR3RI^AoVGdKc3c@[=j=M2
+!s100 6E=EW0UMn<FE14?z1lgi63
+R8
+31
+R9
+!i10b 1
+R10
+Z33 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/Lab5.vhd|
+Z34 !s107 /home/allu/QuartusProjects/EXE2/Lab5.vhd|
+!i113 1
+R13
+R14
+Alabvt
+R2
+R3
+R4
+R5
+DEx4 work 4 lab5 0 22 MR3RI^AoVGdKc3c@[=j=M2
+l36
+L14
+VhRf[Ej?dHfG6LCmd4YlDG2
+!s100 hNI0R2FHCmGSzN4A543ij1
+R8
+31
+R9
+!i10b 1
+R10
+R33
+R34
+!i113 1
+R13
+R14
+Emodb
+Z35 w1505499712
+R4
+R5
+R0
+Z36 8/home/allu/QuartusProjects/EXE2/modb.vhd
+Z37 F/home/allu/QuartusProjects/EXE2/modb.vhd
+l0
+L3
+Vh;5aXHdd?T<4<=NlO`Gik0
+!s100 _h^maV8S;Nnb>6i=<Ti]o3
+R8
+31
+R9
+!i10b 1
+R10
+Z38 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/modb.vhd|
+Z39 !s107 /home/allu/QuartusProjects/EXE2/modb.vhd|
+!i113 1
+R13
+R14
+Acircuito
+R4
+R5
+DEx4 work 4 modb 0 22 h;5aXHdd?T<4<=NlO`Gik0
+l11
+L10
+VmlkK<9Qc49kORZU?oiYUT1
+!s100 mIQ2aQ3]bD3R4;WoBS64]2
+R8
+31
+R9
+!i10b 1
+R10
+R38
+R39
+!i113 1
+R13
+R14
+Emult
+R15
+R2
+R3
+R4
+R5
+R0
+Z40 8/home/allu/QuartusProjects/EXE2/Mult.vhd
+Z41 F/home/allu/QuartusProjects/EXE2/Mult.vhd
+l0
+L6
+VNXjneTTlkc?YcHlX3bF8M0
+!s100 ;4BS:Oki7=doh7^V5Jzka3
+R8
+31
+R9
+!i10b 1
+R10
+Z42 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/Mult.vhd|
+Z43 !s107 /home/allu/QuartusProjects/EXE2/Mult.vhd|
+!i113 1
+R13
+R14
+Ac22
+R2
+R3
+R4
+R5
+DEx4 work 4 mult 0 22 NXjneTTlkc?YcHlX3bF8M0
+l16
+L15
+VE>mm<j`c5lc9>4:8A:fRK0
+!s100 fBj_[8@i8dn0^fjZ@RzC40
+R8
+31
+R9
+!i10b 1
+R10
+R42
+R43
+!i113 1
+R13
+R14
+Esomasub
+Z44 w1506001969
+R4
+R5
+R0
+Z45 8/home/allu/QuartusProjects/EXE2/somasub.vhd
+Z46 F/home/allu/QuartusProjects/EXE2/somasub.vhd
+l0
+L4
+VZGP5ja8HKdMm6`lEK8cO?0
+!s100 IF;>S1SEN5]b_Rc^DIU^:0
+R8
+31
+R9
+!i10b 1
+R10
+Z47 !s90 -reportprogress|300|-93|-work|work|/home/allu/QuartusProjects/EXE2/somasub.vhd|
+Z48 !s107 /home/allu/QuartusProjects/EXE2/somasub.vhd|
+!i113 1
+R13
+R14
+Asoma4
+R4
+R5
+DEx4 work 7 somasub 0 22 ZGP5ja8HKdMm6`lEK8cO?0
+l33
+L12
+VWj3QkEb8o_T3h3CLR_Pj?1
+!s100 D2c]>K`>V0X>;M?IkT9[i1
+R8
+31
+R9
+!i10b 1
+R10
+R47
+R48
+!i113 1
+R13
+R14

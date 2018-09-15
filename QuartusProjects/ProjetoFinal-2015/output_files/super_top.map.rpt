@@ -1,0 +1,619 @@
+Analysis & Synthesis report for super_top
+Mon Nov 23 23:28:10 2015
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |super_top|fsm_control_top:L4|FSMctrl:L0|PE
+  9. State Machine - |super_top|fsm_control_top:L4|FSMctrl:L0|EA
+ 10. State Machine - |super_top|sequencer_top:L1|seq2_fsm:L2|EA
+ 11. State Machine - |super_top|sequencer_top:L1|seq1_fsm:L1|EA
+ 12. State Machine - |super_top|sequencer_top:L1|seq0_fsm:L0|EA
+ 13. State Machine - |super_top|clock_div_FSM:L0|PE
+ 14. State Machine - |super_top|clock_div_FSM:L0|EA
+ 15. Registers Removed During Synthesis
+ 16. General Register Statistics
+ 17. Inverted Register Statistics
+ 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 19. Port Connectivity Checks: "adder_register_top:L3"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Nov 23 23:28:10 2015      ;
+; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                   ; super_top                                  ;
+; Top-level Entity Name           ; super_top                                  ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 130                                        ;
+; Total pins                      ; 58                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; super_top          ; super_top          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+; sequencer_top.vhd                ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/sequencer_top.vhd      ;         ;
+; seq0_fsm.vhd                     ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/seq0_fsm.vhd           ;         ;
+; seq1_fsm.vhd                     ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/seq1_fsm.vhd           ;         ;
+; seq2_fsm.vhd                     ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/seq2_fsm.vhd           ;         ;
+; super_top.vhd                    ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/super_top.vhd          ;         ;
+; decod7.vhd                       ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/decod7.vhd             ;         ;
+; clock_div_FSM.vhd                ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/clock_div_FSM.vhd      ;         ;
+; ROM.vhd                          ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/ROM.vhd                ;         ;
+; adder_register_top.vhd           ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/adder_register_top.vhd ;         ;
+; signed_adder.vhd                 ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/signed_adder.vhd       ;         ;
+; D_11FF.vhd                       ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/D_11FF.vhd             ;         ;
+; fsm_control_top.vhd              ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/fsm_control_top.vhd    ;         ;
+; FSMctrl.vhd                      ; yes             ; User VHDL File  ; C:/Users/Alunos/Desktop/ALL_TOGETHER1/FSMctrl.vhd            ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 127            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 210            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 35             ;
+;     -- 5 input functions                    ; 47             ;
+;     -- 4 input functions                    ; 43             ;
+;     -- <=3 input functions                  ; 85             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 130            ;
+;                                             ;                ;
+; I/O pins                                    ; 58             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; clock_50~input ;
+; Maximum fan-out                             ; 82             ;
+; Total fan-out                               ; 1305           ;
+; Average fan-out                             ; 2.86           ;
++---------------------------------------------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------+--------------+
+; |super_top                 ; 210 (1)           ; 130 (0)      ; 0                 ; 0          ; 58   ; 0            ; |super_top                                       ; work         ;
+;    |ROM:L2|                ; 31 (31)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |super_top|ROM:L2                                ; work         ;
+;    |adder_register_top:L3| ; 17 (2)            ; 11 (0)       ; 0                 ; 0          ; 0    ; 0            ; |super_top|adder_register_top:L3                 ; work         ;
+;       |D_11FF:L1|          ; 4 (4)             ; 11 (11)      ; 0                 ; 0          ; 0    ; 0            ; |super_top|adder_register_top:L3|D_11FF:L1       ; work         ;
+;       |signed_adder:L0|    ; 11 (11)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |super_top|adder_register_top:L3|signed_adder:L0 ; work         ;
+;    |clock_div_FSM:L0|      ; 62 (62)           ; 35 (35)      ; 0                 ; 0          ; 0    ; 0            ; |super_top|clock_div_FSM:L0                      ; work         ;
+;    |fsm_control_top:L4|    ; 40 (0)            ; 36 (0)       ; 0                 ; 0          ; 0    ; 0            ; |super_top|fsm_control_top:L4                    ; work         ;
+;       |FSMctrl:L0|         ; 27 (27)           ; 36 (36)      ; 0                 ; 0          ; 0    ; 0            ; |super_top|fsm_control_top:L4|FSMctrl:L0         ; work         ;
+;       |decod7:L1|          ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |super_top|fsm_control_top:L4|decod7:L1          ; work         ;
+;       |decod7:L2|          ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |super_top|fsm_control_top:L4|decod7:L2          ; work         ;
+;    |sequencer_top:L1|      ; 59 (0)            ; 48 (0)       ; 0                 ; 0          ; 0    ; 0            ; |super_top|sequencer_top:L1                      ; work         ;
+;       |decod7:L3|          ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |super_top|sequencer_top:L1|decod7:L3            ; work         ;
+;       |decod7:L4|          ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |super_top|sequencer_top:L1|decod7:L4            ; work         ;
+;       |decod7:L5|          ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |super_top|sequencer_top:L1|decod7:L5            ; work         ;
+;       |seq0_fsm:L0|        ; 12 (12)           ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |super_top|sequencer_top:L1|seq0_fsm:L0          ; work         ;
+;       |seq1_fsm:L1|        ; 12 (12)           ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |super_top|sequencer_top:L1|seq1_fsm:L1          ; work         ;
+;       |seq2_fsm:L2|        ; 13 (13)           ; 16 (16)      ; 0                 ; 0          ; 0    ; 0            ; |super_top|sequencer_top:L1|seq2_fsm:L2          ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |super_top|fsm_control_top:L4|FSMctrl:L0|PE                                           ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; Name  ; PE.B5 ; PE.B4 ; PE.B3 ; PE.B2 ; PE.B1 ; PE.S6 ; PE.S5 ; PE.S4 ; PE.S3 ; PE.S2 ; PE.S1 ; PE.S0 ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; PE.S0 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; PE.S1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; PE.S2 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; PE.S3 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; PE.S4 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; PE.S5 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; PE.S6 ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; PE.B1 ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; PE.B2 ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; PE.B3 ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; PE.B4 ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; PE.B5 ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |super_top|fsm_control_top:L4|FSMctrl:L0|EA                                           ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; Name  ; EA.B5 ; EA.B4 ; EA.B3 ; EA.B2 ; EA.B1 ; EA.S6 ; EA.S5 ; EA.S4 ; EA.S3 ; EA.S2 ; EA.S1 ; EA.S0 ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; EA.S0 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; EA.S1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; EA.S2 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; EA.S3 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; EA.S4 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S5 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S6 ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.B1 ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.B2 ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.B3 ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.B4 ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.B5 ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |super_top|sequencer_top:L1|seq2_fsm:L2|EA                                                                                   ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; Name   ; EA.S15 ; EA.S14 ; EA.S13 ; EA.S12 ; EA.S11 ; EA.S10 ; EA.S9 ; EA.S8 ; EA.S7 ; EA.S6 ; EA.S5 ; EA.S4 ; EA.S3 ; EA.S2 ; EA.S1 ; EA.S0 ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; EA.S0  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; EA.S1  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; EA.S2  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; EA.S3  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; EA.S4  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S5  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S6  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S7  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S8  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S9  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S10 ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S11 ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S12 ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S13 ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S14 ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S15 ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |super_top|sequencer_top:L1|seq1_fsm:L1|EA                                                                                   ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; Name   ; EA.S15 ; EA.S14 ; EA.S13 ; EA.S12 ; EA.S11 ; EA.S10 ; EA.S9 ; EA.S8 ; EA.S7 ; EA.S6 ; EA.S5 ; EA.S4 ; EA.S3 ; EA.S2 ; EA.S1 ; EA.S0 ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; EA.S0  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; EA.S1  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; EA.S2  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; EA.S3  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; EA.S4  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S5  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S6  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S7  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S8  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S9  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S10 ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S11 ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S12 ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S13 ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S14 ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S15 ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |super_top|sequencer_top:L1|seq0_fsm:L0|EA                                                                                   ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; Name   ; EA.S15 ; EA.S14 ; EA.S13 ; EA.S12 ; EA.S11 ; EA.S10 ; EA.S9 ; EA.S8 ; EA.S7 ; EA.S6 ; EA.S5 ; EA.S4 ; EA.S3 ; EA.S2 ; EA.S1 ; EA.S0 ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; EA.S0  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; EA.S1  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; EA.S2  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; EA.S3  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; EA.S4  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S5  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S6  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S7  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S8  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S9  ; 0      ; 0      ; 0      ; 0      ; 0      ; 0      ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S10 ; 0      ; 0      ; 0      ; 0      ; 0      ; 1      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S11 ; 0      ; 0      ; 0      ; 0      ; 1      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S12 ; 0      ; 0      ; 0      ; 1      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S13 ; 0      ; 0      ; 1      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S14 ; 0      ; 1      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S15 ; 1      ; 0      ; 0      ; 0      ; 0      ; 0      ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++--------+--------+--------+--------+--------+--------+--------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------+
+; State Machine - |super_top|clock_div_FSM:L0|PE ;
++-------+-------+-------+-------+----------------+
+; Name  ; PE.D3 ; PE.D2 ; PE.D1 ; PE.D0          ;
++-------+-------+-------+-------+----------------+
+; PE.D0 ; 0     ; 0     ; 0     ; 0              ;
+; PE.D1 ; 0     ; 0     ; 1     ; 1              ;
+; PE.D2 ; 0     ; 1     ; 0     ; 1              ;
+; PE.D3 ; 1     ; 0     ; 0     ; 1              ;
++-------+-------+-------+-------+----------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------+
+; State Machine - |super_top|clock_div_FSM:L0|EA ;
++-------+-------+-------+-------+----------------+
+; Name  ; EA.D3 ; EA.D2 ; EA.D1 ; EA.D0          ;
++-------+-------+-------+-------+----------------+
+; EA.D0 ; 0     ; 0     ; 0     ; 0              ;
+; EA.D1 ; 0     ; 0     ; 1     ; 1              ;
+; EA.D2 ; 0     ; 1     ; 0     ; 1              ;
+; EA.D3 ; 1     ; 0     ; 0     ; 1              ;
++-------+-------+-------+-------+----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                      ;
++------------------------------------------------+----------------------------------------+
+; Register name                                  ; Reason for Removal                     ;
++------------------------------------------------+----------------------------------------+
+; fsm_control_top:L4|FSMctrl:L0|current_state[3] ; Stuck at GND due to stuck port data_in ;
+; clock_div_FSM:L0|limit[0..3]                   ; Stuck at GND due to stuck port data_in ;
+; clock_div_FSM:L0|limit[5,6]                    ; Stuck at VCC due to stuck port data_in ;
+; clock_div_FSM:L0|limit[8..10]                  ; Stuck at GND due to stuck port data_in ;
+; clock_div_FSM:L0|limit[12,13]                  ; Stuck at VCC due to stuck port data_in ;
+; clock_div_FSM:L0|limit[15,18]                  ; Stuck at GND due to stuck port data_in ;
+; clock_div_FSM:L0|limit[20,21]                  ; Stuck at VCC due to stuck port data_in ;
+; clock_div_FSM:L0|limit[23]                     ; Stuck at GND due to stuck port data_in ;
+; clock_div_FSM:L0|limit[7,17,22]                ; Merged with clock_div_FSM:L0|limit[14] ;
+; clock_div_FSM:L0|limit[4,16,19]                ; Merged with clock_div_FSM:L0|limit[11] ;
+; Total Number of Removed Registers = 23         ;                                        ;
++------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 130   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 75    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 51    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; adder_register_top:L3|D_11FF:L1|Q[0]   ; 3       ;
+; adder_register_top:L3|D_11FF:L1|Q[1]   ; 3       ;
+; adder_register_top:L3|D_11FF:L1|Q[2]   ; 3       ;
+; adder_register_top:L3|D_11FF:L1|Q[4]   ; 3       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |super_top|fsm_control_top:L4|decod7:L2|F[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_register_top:L3"                                                                           ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; current_value[10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 130                         ;
+;     CLR               ; 27                          ;
+;     ENA               ; 3                           ;
+;     ENA CLR           ; 48                          ;
+;     plain             ; 52                          ;
+; arriav_lcell_comb     ; 221                         ;
+;     arith             ; 35                          ;
+;         1 data inputs ; 24                          ;
+;         3 data inputs ; 11                          ;
+;     normal            ; 186                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 43                          ;
+;         5 data inputs ; 47                          ;
+;         6 data inputs ; 35                          ;
+; boundary_port         ; 58                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.20                        ;
+; Average LUT depth     ; 4.12                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Mon Nov 23 23:27:55 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off super_top -c super_top
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file sequencer_top.vhd
+    Info (12022): Found design unit 1: sequencer_top-topo_stru
+    Info (12023): Found entity 1: sequencer_top
+Info (12021): Found 2 design units, including 1 entities, in source file seq0_fsm.vhd
+    Info (12022): Found design unit 1: seq0_fsm-bhv
+    Info (12023): Found entity 1: seq0_fsm
+Info (12021): Found 2 design units, including 1 entities, in source file seq1_fsm.vhd
+    Info (12022): Found design unit 1: seq1_fsm-bhv
+    Info (12023): Found entity 1: seq1_fsm
+Info (12021): Found 2 design units, including 1 entities, in source file seq2_fsm.vhd
+    Info (12022): Found design unit 1: seq2_fsm-bhv
+    Info (12023): Found entity 1: seq2_fsm
+Info (12021): Found 2 design units, including 1 entities, in source file super_top.vhd
+    Info (12022): Found design unit 1: super_top-supertop_stru
+    Info (12023): Found entity 1: super_top
+Info (12021): Found 2 design units, including 1 entities, in source file decod7.vhd
+    Info (12022): Found design unit 1: decod7-decod_bhv
+    Info (12023): Found entity 1: decod7
+Warning (12019): Can't analyze file -- file clock_div_top.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file clock_div_fsm.vhd
+    Info (12022): Found design unit 1: clock_div_FSM-bhv
+    Info (12023): Found entity 1: clock_div_FSM
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: ROM-BEV
+    Info (12023): Found entity 1: ROM
+Info (12021): Found 2 design units, including 1 entities, in source file adder_register_top.vhd
+    Info (12022): Found design unit 1: adder_register_top-topo_stru
+    Info (12023): Found entity 1: adder_register_top
+Info (12021): Found 2 design units, including 1 entities, in source file signed_adder.vhd
+    Info (12022): Found design unit 1: signed_adder-rtl
+    Info (12023): Found entity 1: signed_adder
+Info (12021): Found 2 design units, including 1 entities, in source file d_11ff.vhd
+    Info (12022): Found design unit 1: D_11FF-behv
+    Info (12023): Found entity 1: D_11FF
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_control_top.vhd
+    Info (12022): Found design unit 1: fsm_control_top-topo_stru
+    Info (12023): Found entity 1: fsm_control_top
+Info (12021): Found 2 design units, including 1 entities, in source file fsmctrl.vhd
+    Info (12022): Found design unit 1: FSMctrl-FSM_beh
+    Info (12023): Found entity 1: FSMctrl
+Info (12127): Elaborating entity "super_top" for the top level hierarchy
+Info (12128): Elaborating entity "clock_div_FSM" for hierarchy "clock_div_FSM:L0"
+Warning (10492): VHDL Process Statement warning at clock_div_FSM.vhd(25): signal "S0_reset" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "sequencer_top" for hierarchy "sequencer_top:L1"
+Info (12128): Elaborating entity "seq0_fsm" for hierarchy "sequencer_top:L1|seq0_fsm:L0"
+Warning (10492): VHDL Process Statement warning at seq0_fsm.vhd(21): signal "reset_to_s0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "seq1_fsm" for hierarchy "sequencer_top:L1|seq1_fsm:L1"
+Warning (10492): VHDL Process Statement warning at seq1_fsm.vhd(21): signal "reset_to_s0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "seq2_fsm" for hierarchy "sequencer_top:L1|seq2_fsm:L2"
+Warning (10492): VHDL Process Statement warning at seq2_fsm.vhd(21): signal "reset_to_s0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "decod7" for hierarchy "sequencer_top:L1|decod7:L3"
+Info (10041): Inferred latch for "F[0]" at decod7.vhd(13)
+Info (10041): Inferred latch for "F[1]" at decod7.vhd(13)
+Info (10041): Inferred latch for "F[2]" at decod7.vhd(13)
+Info (10041): Inferred latch for "F[3]" at decod7.vhd(13)
+Info (10041): Inferred latch for "F[4]" at decod7.vhd(13)
+Info (10041): Inferred latch for "F[5]" at decod7.vhd(13)
+Info (10041): Inferred latch for "F[6]" at decod7.vhd(13)
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:L2"
+Info (12128): Elaborating entity "adder_register_top" for hierarchy "adder_register_top:L3"
+Info (12128): Elaborating entity "signed_adder" for hierarchy "adder_register_top:L3|signed_adder:L0"
+Info (12128): Elaborating entity "D_11FF" for hierarchy "adder_register_top:L3|D_11FF:L1"
+Warning (10492): VHDL Process Statement warning at D_11FF.vhd(16): signal "reset_to_s0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "fsm_control_top" for hierarchy "fsm_control_top:L4"
+Info (12128): Elaborating entity "FSMctrl" for hierarchy "fsm_control_top:L4|FSMctrl:L0"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity ghrd_top -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+Info (21057): Implemented 327 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 269 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 749 megabytes
+    Info: Processing ended: Mon Nov 23 23:28:10 2015
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:33
+
+

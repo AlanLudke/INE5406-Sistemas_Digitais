@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.Std_Logic_1164.all;
+entity halfadder is
+port (A: in std_logic;
+	  B: in std_logic;
+	  S: out std_logic;
+	  Cout: out std_logic
+	  );
+end halfadder;
+architecture Lab3ee of halfadder is
+begin
+S <= A xor B;
+Cout <= A and B;
+end Lab3ee;
+
+
+
+
+library IEEE;
+use IEEE.Std_Logic_1164.all;
+entity m is
+port (A: in std_logic;
+	  B: in std_logic;
+	  Cin: in std_logic;
+	  S: out std_logic;
+	  Cout: out std_logic
+	  );
+end m;
+architecture full of m is
+signal D,E,F: std_logic;
+begin
+D <= A xor B;
+E <= D and Cin;
+F <= A and B;
+S <= D xor Cin;
+Cout <= E or F;
+end full;

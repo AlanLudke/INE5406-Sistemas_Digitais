@@ -1,0 +1,28 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/registradorSaidapontos.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/Jogo.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/Decod7seg.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/CONTROLE.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/multiplexadorROM.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/registradorMuxROMs.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/ROM1.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/mux4x1Clock.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/Datapath.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/ROM3.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/ROM2.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/ContadorClock.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/registradorComparador.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/Decod7segLevel.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/ButtonSync.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/DecodLED.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/ROM4.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/Comparador.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/Contador.vhd}
+vcom -93 -work work {/home/allu/Documentos/QuartusProjects/DANIELA_ALAN_PROJ/output_files/mux4x1_8bit.vhd}
+

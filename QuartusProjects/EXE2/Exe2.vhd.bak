@@ -1,0 +1,38 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_unsigned.all;
+
+entity Lab5 is
+	port (C2: in std_logic_vector(3 downto 0));
+end Lab5;
+
+architecture labvt of Lab5 is
+	signal SC2: std_logic_vector(3 downto 0);
+	signal ECOD: std_logic_vector(3 downto 0);
+	signal SCOD: std_logic_vector(6 downto 0);
+	
+	component Mult is
+			port (W: in std_logic_vector(3 downto 0);
+					Y: in std_logic_vector(3 downto 0);
+					sel: in std_logic;
+					saida: out std_logic_vector(3 downto 0)
+			);
+	end component;
+
+	component Compl2 is
+		port (X: in std_logic_vector(3 downto 0);
+				Y: out std_logic_vector(3 downto 0));
+	end component;
+	
+	component Decod is
+		port (C: in std_logic_vector(3 downto 0);
+				F: out std_logic_vector(6 downto 0));
+	end component;
+
+	begin
+		CP2: Compl2 port map(C2, SC2);
+		MUX1: Mult port map(C2, SC2, C2(3), ECOD);
+		DEC1: Decod port map(ECOD, SCOD);
+		
+end labvt;

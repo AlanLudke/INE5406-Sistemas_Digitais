@@ -1,0 +1,128 @@
+# do Exe2_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying /opt/altera_lite/15.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera_lite/15.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/Exe2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/Exe2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Exe2
+# -- Compiling architecture exefoda of Exe2
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/Lab5.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/Lab5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Lab5
+# -- Compiling architecture labvt of Lab5
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/somasub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/somasub.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity somasub
+# -- Compiling architecture soma4 of somasub
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/Mult.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/Mult.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Mult
+# -- Compiling architecture c22 of Mult
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/modb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/modb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity modb
+# -- Compiling architecture circuito of modb
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/fulladder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/fulladder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity fulladder
+# -- Compiling architecture Lab4FA of fulladder
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/Decod.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/Decod.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decod
+# -- Compiling architecture decodx of Decod
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/allu/QuartusProjects/EXE2/Compl2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
+# Start time: 22:59:33 on Oct 08,2017
+# vcom -reportprogress 300 -93 -work work /home/allu/QuartusProjects/EXE2/Compl2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Compl2
+# -- Compiling architecture c22 of Compl2
+# End time: 22:59:33 on Oct 08,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.exe2
+# vsim work.exe2 
+# Start time: 22:59:39 on Oct 08,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.exe2(exefoda)
+# Loading work.somasub(soma4)
+# Loading work.modb(circuito)
+# Loading work.fulladder(lab4fa)
+# Loading work.lab5(labvt)
+# Loading work.compl2(c22)
+# Loading work.mult(c22)
+# Loading work.decod(decodx)
+# End time: 22:59:49 on Oct 08,2017, Elapsed time: 0:00:10
+# Errors: 0, Warnings: 0

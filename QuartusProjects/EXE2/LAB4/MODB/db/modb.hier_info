@@ -1,0 +1,8 @@
+|modb
+B => E.IN0
+B => E.IN0
+C0 => E.IN1
+C1 => E.IN1
+E <= E.DB_MAX_OUTPUT_PORT_TYPE
+
+

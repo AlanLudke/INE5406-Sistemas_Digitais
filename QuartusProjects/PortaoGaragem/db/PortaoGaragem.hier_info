@@ -1,0 +1,15 @@
+|PortaoGaragem
+clk => state~1.DATAIN
+reset => state.FECHANDO.OUTPUTSELECT
+reset => state.FECHADO.OUTPUTSELECT
+reset => state.ABRINDO.OUTPUTSELECT
+reset => state.ABERTO.OUTPUTSELECT
+SA => process_0.IN0
+SF => process_0.IN0
+SO => process_0.IN0
+CR => process_0.IN0
+CR => process_0.IN0
+output[0] <= output[0].DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
