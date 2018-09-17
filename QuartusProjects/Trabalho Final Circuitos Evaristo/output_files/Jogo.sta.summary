@@ -2,212 +2,108 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'SW[8]'
-Slack : -10.280
-TNS   : -74.127
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -5.277
+TNS   : -297.698
 
-Type  : Slow 1100mV 85C Model Setup 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : -8.805
-TNS   : -42.643
+Type  : Slow Model Setup 'ButtonSync:bs|btn1state.SaidaAtiva'
+Slack : -5.040
+TNS   : -20.145
 
-Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -4.869
-TNS   : -410.897
+Type  : Slow Model Setup 'SW[8]'
+Slack : -4.708
+TNS   : -27.388
 
-Type  : Slow 1100mV 85C Model Hold 'SW[8]'
-Slack : -5.129
-TNS   : -20.518
+Type  : Slow Model Hold 'SW[8]'
+Slack : -3.908
+TNS   : -26.055
 
-Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -2.586
-TNS   : -19.371
+Type  : Slow Model Hold 'ButtonSync:bs|btn1state.SaidaAtiva'
+Slack : -1.486
+TNS   : -5.934
 
-Type  : Slow 1100mV 85C Model Hold 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.653
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -0.767
+TNS   : -1.096
+
+Type  : Slow Model Recovery 'CLOCK_50'
+Slack : -0.843
+TNS   : -109.545
+
+Type  : Slow Model Recovery 'SW[8]'
+Slack : 0.634
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -3.221
-TNS   : -323.014
+Type  : Slow Model Removal 'SW[8]'
+Slack : -3.035
+TNS   : -25.157
 
-Type  : Slow 1100mV 85C Model Recovery 'SW[8]'
-Slack : 2.599
+Type  : Slow Model Removal 'CLOCK_50'
+Slack : 0.434
 TNS   : 0.000
 
-Type  : Slow 1100mV 85C Model Removal 'SW[8]'
-Slack : -5.495
-TNS   : -48.378
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -142.380
 
-Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
-Slack : -2.397
-TNS   : -116.955
+Type  : Slow Model Minimum Pulse Width 'SW[8]'
+Slack : -1.238
+TNS   : -38.218
 
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SW[8]'
-Slack : -1.229
-TNS   : -29.683
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.394
-TNS   : -89.641
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.335
+Type  : Slow Model Minimum Pulse Width 'ButtonSync:bs|btn1state.SaidaAtiva'
+Slack : 0.500
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'SW[8]'
-Slack : -10.170
-TNS   : -71.819
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -2.202
+TNS   : -75.743
 
-Type  : Slow 1100mV 0C Model Setup 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : -8.467
-TNS   : -42.196
+Type  : Fast Model Setup 'ButtonSync:bs|btn1state.SaidaAtiva'
+Slack : -1.992
+TNS   : -5.861
 
-Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -4.576
-TNS   : -398.949
+Type  : Fast Model Setup 'SW[8]'
+Slack : -1.876
+TNS   : -10.233
 
-Type  : Slow 1100mV 0C Model Hold 'SW[8]'
-Slack : -4.864
-TNS   : -18.926
+Type  : Fast Model Hold 'SW[8]'
+Slack : -1.945
+TNS   : -12.887
 
-Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -2.643
-TNS   : -20.497
+Type  : Fast Model Hold 'ButtonSync:bs|btn1state.SaidaAtiva'
+Slack : -0.884
+TNS   : -3.527
 
-Type  : Slow 1100mV 0C Model Hold 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.476
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -0.410
+TNS   : -1.611
+
+Type  : Fast Model Recovery 'CLOCK_50'
+Slack : 0.035
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -2.894
-TNS   : -289.403
-
-Type  : Slow 1100mV 0C Model Recovery 'SW[8]'
-Slack : 2.425
+Type  : Fast Model Recovery 'SW[8]'
+Slack : 0.252
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Removal 'SW[8]'
-Slack : -5.240
-TNS   : -46.085
+Type  : Fast Model Removal 'SW[8]'
+Slack : -1.346
+TNS   : -10.863
 
-Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
-Slack : -2.451
-TNS   : -120.907
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SW[8]'
-Slack : -1.191
-TNS   : -29.180
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.394
-TNS   : -97.173
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.311
+Type  : Fast Model Removal 'CLOCK_50'
+Slack : 0.424
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Setup 'SW[8]'
-Slack : -7.056
-TNS   : -49.434
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -142.380
 
-Type  : Fast 1100mV 85C Model Setup 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : -5.206
-TNS   : -21.372
+Type  : Fast Model Minimum Pulse Width 'SW[8]'
+Slack : -1.222
+TNS   : -24.874
 
-Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.962
-TNS   : -181.089
-
-Type  : Fast 1100mV 85C Model Hold 'SW[8]'
-Slack : -2.917
-TNS   : -11.852
-
-Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : -1.476
-TNS   : -11.282
-
-Type  : Fast 1100mV 85C Model Hold 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.409
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
-Slack : -2.150
-TNS   : -212.772
-
-Type  : Fast 1100mV 85C Model Recovery 'SW[8]'
-Slack : 1.784
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Removal 'SW[8]'
-Slack : -3.150
-TNS   : -27.677
-
-Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
-Slack : -1.376
-TNS   : -67.465
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SW[8]'
-Slack : -0.912
-TNS   : -16.442
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.084
-TNS   : -13.378
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.417
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Setup 'SW[8]'
-Slack : -6.156
-TNS   : -44.301
-
-Type  : Fast 1100mV 0C Model Setup 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : -4.873
-TNS   : -20.110
-
-Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.759
-TNS   : -149.786
-
-Type  : Fast 1100mV 0C Model Hold 'SW[8]'
-Slack : -2.799
-TNS   : -11.770
-
-Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : -1.477
-TNS   : -11.726
-
-Type  : Fast 1100mV 0C Model Hold 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.329
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
-Slack : -1.589
-TNS   : -155.865
-
-Type  : Fast 1100mV 0C Model Recovery 'SW[8]'
-Slack : 1.755
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Removal 'SW[8]'
-Slack : -3.024
-TNS   : -26.609
-
-Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
-Slack : -1.384
-TNS   : -68.740
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SW[8]'
-Slack : -0.837
-TNS   : -15.263
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.083
-TNS   : -13.401
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ButtonSync:bs|btn1state.SaidaAtiva'
-Slack : 0.413
+Type  : Fast Model Minimum Pulse Width 'ButtonSync:bs|btn1state.SaidaAtiva'
+Slack : 0.500
 TNS   : 0.000
 
 ------------------------------------------------------------
