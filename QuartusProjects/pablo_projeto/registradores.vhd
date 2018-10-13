@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.Std_Logic_1164.all;
 
 entity registradores is
-	generic (N: natural := 20); --REGISTRADOR GENERICO COMO APRENDIDO EM SALA DE AULA
+	generic (N: natural := 20);
 	port ( 	clk	:in std_logic;
 				reset	:in std_logic;
 				enable: in std_logic;

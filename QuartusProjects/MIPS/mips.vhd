@@ -3,7 +3,7 @@ USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;
 
 entity mips is
-	port 
+	port
 	(
 		--debug s to check in testbench
 		dbg_mux_wAddr : out std_logic_vector(4 downto 0);
@@ -21,7 +21,7 @@ end entity;
 architecture behavior of mips is
 component datapath is
 	generic (DATA_S : integer := 32; INSTRUCT_S : integer:= 26; ADDR_S : integer := 5);
-	port 
+	port
 	(
 		--debug signals to check in testbench
 		dbg_mux_wAddr : out std_logic_vector(ADDR_S-1 downto 0);
@@ -58,7 +58,7 @@ component instruction_memory_reg is
 end component;
 
 component mips_decoder is
-	port 
+	port
 	(
 		instruction : in std_logic_vector(5 downto 0);
 		control : out std_logic_vector(6 downto 0)
@@ -71,13 +71,14 @@ end component;
 	signal s_dataMem : std_logic_vector(31 downto 0);
 	signal s_rReg1 : std_logic_vector(31 downto 0);
 	signal s_ula_result : std_logic_vector(31 downto 0);
+
 begin
 
 dbg_pc <= s_pc;
 dbg_instruction <= s_instruction;
 dbg_control <= s_control;
 
-databath_b : datapath 
+databath_b : datapath
 	generic map (DATA_S => 32, INSTRUCT_S => 26, ADDR_S => 5)
 	port map
 	(
@@ -90,10 +91,10 @@ databath_b : datapath
 		dbg_reg2 => dbg_reg2,
 		dbg_signal_extender => dbg_signal_extender,
 		dbg_zero => dbg_zero,
-		dbg_reg_addr1 => dbg_reg_addr1, 
+		dbg_reg_addr1 => dbg_reg_addr1,
 		dbg_reg_addr2 => dbg_reg_addr2,
 		dbg_ula_OpFunct =>dbg_ula_OpFunct,
-		
+
 		--project signals
 		clk => clk,
 		rst => rst,
@@ -104,7 +105,7 @@ databath_b : datapath
 		o_ula_result => s_ula_result,
 		o_rReg1 => s_rReg1
 	);
-	
+
 data_mem: data_memory_reg
 	port map(
 		clk => clk,
@@ -113,14 +114,14 @@ data_mem: data_memory_reg
 		data => s_rReg1,
 		q => s_dataMem
 	);
-	
+
 inst_mem : instruction_memory_reg
 port map (
 		addr => std_logic_vector(to_unsigned(s_pc, 7)),
 		q => s_instruction
 	);
 
-decoder_i : mips_decoder 
+decoder_i : mips_decoder
 	port map
 	(
 		instruction => s_instruction(31 downto 26),

@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {AchaMaiorElementoVetor.vho AchaMaiorElementoVetor_vhd.sdo}}
+	{{"Fast Model"} {AchaMaiorElementoVetor_fast.vho AchaMaiorElementoVetor_vhd_fast.sdo}}
+}

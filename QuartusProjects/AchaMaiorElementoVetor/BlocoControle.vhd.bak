@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity BlocoControle is
+	port (
+	clock, reset: in std_logic;
+	iLessTam, maxLessValue: in std_logic;
+	loadI, loadMaxV, loadMaxA: out std_logic;
+	);
+end entity;
+
+architecture oioioi of AchaMaiorElementoVetor is
+begin
+
+end architecture;

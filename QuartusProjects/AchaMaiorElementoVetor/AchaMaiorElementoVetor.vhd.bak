@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity AchaMaiorElementoVetor is
+	port ();
+end entity;
+
+architecture xxx of AchaMaiorElementoVetor is
+
+component ????
+
+
+begin
+
+RAM: ??? port map();
+
+end architecture;
+
+
+
+
+
+
+
+
+
+
